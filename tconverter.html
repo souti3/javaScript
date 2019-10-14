@@ -5,9 +5,9 @@
 </head>
 <body>
   <form>
-    Celsius <input type="number" step="0.1" name="celsius" id="celsius"></br>
-    Fahrenheit <input type="number" step="0.1" name="fahrenheit" id="fahrenheit"></br>
-    <input type="button" value="convert" onclick="toFahrenheit(celsius.value)">
+    Celsius <input type="number" step="0.1" name="celsius" id="celsius"><br />
+    Fahrenheit <input type="number" step="0.1" name="fahrenheit" id="fahrenheit"><br />
+    <input type="button" value="convert" id="convert" onclick="toFahrenheit(celsius.value)">
   </form>
   <script>
     function toFahrenheit(c){
@@ -19,6 +19,9 @@
       // Fahrenheitswert in das Feld eintragen
       document.getElementById('fahrenheit').value = f;
     }
+    // Möglichkeit ohne onclick (und html Strukturanpassung)
+    // Klammern am Ende der Methode nicht nötig, weil die Methode nicht sofort ausgeführt wird
+    // document.getElementById('convert').addEventListener('click', toFahrenheit)
   </script>
 </body>
 </html>
