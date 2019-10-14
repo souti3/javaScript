@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My JavaScript T Converter</title>
+</head>
+<body>
+  <form>
+    Celsius <input type="number" step="0.1" name="celsius" id="celsius"></br>
+    Fahrenheit <input type="number" step="0.1" name="fahrenheit" id="fahrenheit"></br>
+    <input type="button" value="convert" onclick="toFahrenheit(celsius.value)">
+  </form>
+  <script>
+    function toFahrenheit(c){
+      console.log("Celsius Wert: " + c);
+      const f = c * (9/5) + 32;
+      // Celsius Feld Wert einlesen:
+      // const celsius = document.getElementsById('celsius').value;
+      console.log("Berechneter Fahrenheitswert: " + f);
+      // Fahrenheitswert in das Feld eintragen
+      document.getElementById('fahrenheit').value = f;
+    }
+  </script>
+</body>
+</html>
